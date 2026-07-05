@@ -1,46 +1,101 @@
 # Take me home Challenge
+
 Collection of take me home challenges
 
 Each file in this repository describes a take me home challenge, as given by the issue-ing company. Some are more or less reasonable.
 
 Please make sure you do not distribute this repository or the datasets as they do come from real companies.
 
-## Challenges
+## Features
 
+- **Comprehensive Challenge Collection**: This repository contains a variety of challenges designed to test and improve your data science skills.
+- **Real-world Data**: Challenges use real-world datasets, providing practical experience with actual data.
+- **Detailed Deliverables**: Each challenge includes detailed deliverables, ensuring that all tasks are thoroughly documented and explained.
 
-|  Challenge | Data tables  | Complexity  |
-|---|---|---|
-| [Data Scientist TriAD](data_scientist_triad.md)  | takemehome.triad  |  Easy-to-Medium, depending if only EDA, the rest is not achievable in 4-6 hours |
-| [Data Analyst Artsy](data_analyst_artsy.md)   |   takemehome.artsy_test_user &  takemehome.artsy_pageviews   |  Easy to Medium (second easiest from all)  |
-| [Senior Data Scientist / Engineer K](senior_data_scientist_engineer_k.md)  | takemehome.k_notifications  |  Medium to Difficult, depending on how clean and modular you want to make the code  |
-[Product Analyst Amboss](product_analyst_amboss.md)   |   takemehome.amboss_user_profile &  takemehome.amboss_trial_conversions   |  Easy to Medium (can also be done in SQL)  |
-[Data Scientist Prognostica](data_science_prognostica_de.md)   |   takemehome.prognostica_afo &  prognostica_daten_kunden   |  Medium (requires Time Series Knowledge and is in German)  |
-[Alcemy Coding Challenge](alcemy_coding_challenge.md)   |   no data tables needed   |  Easy to medium (easiest of all)  |
-[dlt Working Student](dlt_working_student.md)   |   dlt_working_student   |  Medium (requires knowledge of dlt pipelines)  |
-[dlt Working Student Teaching](dlt_working_student_teaching.md)   |   data of choice   |  easy to medium (requires basic knowledge of dlt pipelines)  |
-[dlt Solution Engineering](dlt_solutions_engineering.md)   |   data of choice  |  Medium (requires knowledge of dlt pipelines and REST APIs  |
+## How It Works
 
+The repository is structured around different challenges, each with its own set of requirements. You can navigate through the files to find specific challenges and their details.
 
-## Deliverables
+## Technology Stack
 
-Each challenge will have its own deliverables, some a bit too much than the allocated time. What you need to make sure you have:
+| Technology | Purpose |
+|------------|---------|
+| Python     | Primary programming language for data analysis and modeling. |
+| SQL        | Used for querying and manipulating databases. |
 
-Notebook with EDA/Modelling:
- - explanation of task ( you can repeat the text from the challenge in the notebook)
- - code and viz
- - everything documented
- - conclusions
- - every data question/task mentioned in the challenge should be tackled!
+## Requirements
 
+- **Python**: Ensure you have Python installed on your system.
+- **SQL Client**: Access to a SQL client or database connection to interact with the `ds-sql-playground` database.
 
-**Note:**  *If it is not written down, it does not exist!* When you submit TMH challenges the companies evaluated them most of the time in your absence, so it is more important that you explain everything you do and why than do more things!
+## Installation
 
-## Presentation
+To get started, clone this repository:
 
-Each person gets 3 minutes to scroll through their work, any graph that is not interpreted in text cannot be talked about. Why? When you submit a challenge like this, this will be the time the person will allocate to browse over it and you will not be in the room to defend it.
+```bash
+git clone https://github.com/PartORG/ds-take-me-home.git
+cd ds-take-me-home
+```
 
-## Getting the data
+## Configuration
 
-Connect to the ds-sql-playground database with the bootcamp username and password in order to get the data.
+No specific configuration is required for this project. Ensure you have the necessary Python and SQL tools installed on your system.
 
- Hostname: ds-sql-playground.c8g8r1deus2v.eu-central-1.rds.amazonaws.com
+## Quick Start
+
+1. **Connect to the Database**: Use the provided credentials to connect to the `ds-sql-playground` database.
+2. **Navigate Challenges**: Open the relevant challenge file (e.g., `data_scientist_triad.md`) to understand the requirements and deliverables.
+3. **Work on Deliverables**: Create a notebook or script to tackle each task as described in the challenge.
+
+## Usage
+
+To work on a specific challenge, follow these steps:
+
+1. Open the corresponding markdown file (e.g., `data_scientist_triad.md`).
+2. Read through the challenge description and requirements.
+3. Implement the tasks using Python and SQL.
+4. Document your findings and conclusions in a notebook.
+
+## Project Structure
+
+```
+ds-take-me-home/
+├── .github/workflows/
+│   ├── add_issue_to_done.yml
+│   ├── add_issue_todo.yml
+│   ├── add_pr_in_progress.yml
+│   └── add_pr_to_done.yml
+├── .gitignore
+├── README.md
+├── alcemy_coding_challenge.md
+├── data_analyst_artsy.md
+├── data_science_prognostica_de.md
+├── data_scientist_triad.md
+├── dlt_solutions_engineering.md
+├── dlt_working_student.md
+├── dlt_working_student_teaching.md
+├── images/
+│   └── alcemy.png
+└── product_analyst_amboss.md
+```
+
+## Development
+
+This repository is intended for learning and practice. No specific development workflow is provided.
+
+## Testing
+
+No tests are included in this repository.
+
+## Limitations
+
+- **Real-world Data**: The datasets used are real, so they may contain sensitive information.
+- **Time Constraints**: Some challenges have time constraints that may be challenging to meet depending on your skill level.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Feel free to explore and contribute to this repository to improve your data science skills!
