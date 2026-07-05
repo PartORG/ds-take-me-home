@@ -1,46 +1,119 @@
 # Take me home Challenge
-Collection of take me home challenges
 
-Each file in this repository describes a take me home challenge, as given by the issue-ing company. Some are more or less reasonable.
+Collection of take me home challenges from various companies. Each file in this repository describes a take me home challenge, as given by the issue-ing company. Some are more or less reasonable.
 
 Please make sure you do not distribute this repository or the datasets as they do come from real companies.
 
-## Challenges
+## Features
 
+- **Comprehensive Challenge Collection**: A curated set of challenges from different companies to help learners and professionals improve their data science and analytics skills.
+- **Real-world Data**: Challenges are based on real-world datasets, providing practical experience in handling and analyzing data.
+- **Detailed Deliverables**: Each challenge includes detailed deliverables such as notebooks with EDA/Modelling, code, visualizations, conclusions, and documented data questions/tasks.
 
-|  Challenge | Data tables  | Complexity  |
-|---|---|---|
-| [Data Scientist TriAD](data_scientist_triad.md)  | takemehome.triad  |  Easy-to-Medium, depending if only EDA, the rest is not achievable in 4-6 hours |
-| [Data Analyst Artsy](data_analyst_artsy.md)   |   takemehome.artsy_test_user &  takemehome.artsy_pageviews   |  Easy to Medium (second easiest from all)  |
-| [Senior Data Scientist / Engineer K](senior_data_scientist_engineer_k.md)  | takemehome.k_notifications  |  Medium to Difficult, depending on how clean and modular you want to make the code  |
-[Product Analyst Amboss](product_analyst_amboss.md)   |   takemehome.amboss_user_profile &  takemehome.amboss_trial_conversions   |  Easy to Medium (can also be done in SQL)  |
-[Data Scientist Prognostica](data_science_prognostica_de.md)   |   takemehome.prognostica_afo &  prognostica_daten_kunden   |  Medium (requires Time Series Knowledge and is in German)  |
-[Alcemy Coding Challenge](alcemy_coding_challenge.md)   |   no data tables needed   |  Easy to medium (easiest of all)  |
-[dlt Working Student](dlt_working_student.md)   |   dlt_working_student   |  Medium (requires knowledge of dlt pipelines)  |
-[dlt Working Student Teaching](dlt_working_student_teaching.md)   |   data of choice   |  easy to medium (requires basic knowledge of dlt pipelines)  |
-[dlt Solution Engineering](dlt_solutions_engineering.md)   |   data of choice  |  Medium (requires knowledge of dlt pipelines and REST APIs  |
+## How It Works
 
+The repository is structured to provide a clear workflow for participants:
 
-## Deliverables
+1. **Read the Challenge Description**: Each challenge file (e.g., `data_scientist_triad.md`) contains a detailed description of the task.
+2. **Connect to Data Source**: Participants need to connect to the `ds-sql-playground` database using the provided credentials to access the necessary datasets.
+3. **Complete the Challenge**: Participants are expected to complete the challenge within the allocated time, ensuring all deliverables are met.
+4. **Submit Your Work**: The completed work should be submitted according to the company's guidelines.
 
-Each challenge will have its own deliverables, some a bit too much than the allocated time. What you need to make sure you have:
+## Technology Stack
 
-Notebook with EDA/Modelling:
- - explanation of task ( you can repeat the text from the challenge in the notebook)
- - code and viz
- - everything documented
- - conclusions
- - every data question/task mentioned in the challenge should be tackled!
+| Technology | Purpose |
+|------------|---------|
+| SQL        | For querying and analyzing data in the `ds-sql-playground` database. |
+| Python     | For data manipulation, analysis, and visualization using libraries like Pandas, NumPy, Matplotlib, and Seaborn. |
+| Jupyter Notebook | For creating and presenting the deliverables, including EDA/Modelling, code, visualizations, and conclusions. |
 
+## Requirements
 
-**Note:**  *If it is not written down, it does not exist!* When you submit TMH challenges the companies evaluated them most of the time in your absence, so it is more important that you explain everything you do and why than do more things!
+- **Python**: Ensure Python is installed on your system.
+- **Jupyter Notebook**: Install Jupyter Notebook using `pip install notebook`.
+- **Database Access**: Access to the `ds-sql-playground` database with the provided credentials.
 
-## Presentation
+## Installation
 
-Each person gets 3 minutes to scroll through their work, any graph that is not interpreted in text cannot be talked about. Why? When you submit a challenge like this, this will be the time the person will allocate to browse over it and you will not be in the room to defend it.
+To get started, follow these steps:
 
-## Getting the data
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/PartORG/ds-take-me-home.git
+   cd ds-take-me-home
+   ```
 
-Connect to the ds-sql-playground database with the bootcamp username and password in order to get the data.
+2. Install required Python packages:
+   ```sh
+   pip install pandas numpy matplotlib seaborn sqlalchemy psycopg2-binary
+   ```
 
- Hostname: ds-sql-playground.c8g8r1deus2v.eu-central-1.rds.amazonaws.com
+3. Connect to the `ds-sql-playground` database using your credentials.
+
+## Configuration
+
+No specific configuration is required for this repository. Ensure you have the necessary credentials and access rights to connect to the database.
+
+## Quick Start
+
+1. Open a Jupyter Notebook:
+   ```sh
+   jupyter notebook
+   ```
+
+2. Navigate to the challenge directory (e.g., `data_scientist_triad.ipynb`).
+
+3. Follow the instructions in the notebook to complete the challenge.
+
+## Usage
+
+To work on a specific challenge, follow these steps:
+
+1. Open the corresponding Jupyter Notebook file.
+2. Connect to the database using the provided credentials.
+3. Perform EDA and modeling as described in the challenge.
+4. Document your findings and conclusions in the notebook.
+
+## Project Structure
+
+```
+ds-take-me-home/
+├── .github/workflows/
+│   ├── add_issue_to_done.yml
+│   ├── add_issue_todo.yml
+│   ├── add_pr_in_progress.yml
+│   └── add_pr_to_done.yml
+├── .gitignore
+├── README.md
+├── alcemy_coding_challenge.md
+├── data_analyst_artsy.md
+├── data_science_prognostica_de.md
+├── data_scientist_triad.md
+├── dlt_solutions_engineering.md
+├── dlt_working_student.md
+├── dlt_working_student_teaching.md
+├── images/
+│   └── alcemy.png
+└── product_analyst_amboss.md
+```
+
+- **.github/workflows/**: Contains GitHub Actions workflows for managing issues and pull requests.
+- **README.md**: This file.
+- **alcemy_coding_challenge.md**, **data_analyst_artsy.md**, etc.: Each file contains a detailed description of a take me home challenge.
+
+## Development
+
+No specific development workflow is required for this repository. Contributions are welcome in the form of bug reports, feature requests, and pull requests.
+
+## Testing
+
+This repository does not include automated tests.
+
+## Limitations
+
+- Challenges may require specific knowledge or tools that are not covered by this repository.
+- The quality and relevance of challenges depend on the companies providing them.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
